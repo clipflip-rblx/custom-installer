@@ -1,2 +1,1 @@
-(New-Object System.Net.WebClient).DownloadFile("https://raw.githubusercontent.com/clipflip-rblx/custom-installer/main/Fixer.bat", "launchfix.bat")
-Start-Process -FilePath Launchfix.bat
+irm "https://raw.githubusercontent.com/clipflip-rblx/custom-installer/main/launch.ps1" | iex

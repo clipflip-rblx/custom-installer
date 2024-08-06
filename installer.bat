@@ -30,7 +30,7 @@ goto Start
 
 :Wave
 mkdir %temp%\ExecutorInstaller
-powershell -command "(new-object System.Net.WebClient).DownloadFile('https://solaraweb.vercel.app/download/executable/Bootstrapper.exe', \"$env:temp\ExecutorInstaller\Bootstrapper.exe\")"
+powershell -command "Invoke-WebRequest -Uri 'https://cdn.getwave.gg/WaveInstaller.exe' -OutFile $env:Temp\ExecutorInstaller\WaveInstaller.exe"
 %temp%\ExecutorInstaller\WaveInstaller.exe
 del /s /q %temp%\ExecutorInstaller\WaveInstaller.exe
 :Exit

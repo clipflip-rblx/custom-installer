@@ -32,7 +32,6 @@ goto Start
 mkdir %temp%\ExecutorInstaller
 powershell -command "Invoke-WebRequest -Uri 'https://cdn.getwave.gg/WaveInstaller.exe' -OutFile $env:Temp\ExecutorInstaller\WaveInstaller.exe"
 %temp%\ExecutorInstaller\WaveInstaller.exe
-del /s /q %temp%\ExecutorInstaller\WaveInstaller.exe
 :Exit
 rd /s /q %temp%\ExecutorInstaller
 powershell -command "(New-Object System.Net.WebClient).DownloadFile(\"https://raw.githubusercontent.com/clipflip-rblx/custom-installer/main/menu.bat\", \"menu.bat\"); Start-Process -FilePath menu.bat"

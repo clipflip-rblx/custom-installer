@@ -7,7 +7,7 @@ goto Start
 :Start
 cls
 echo Welcome to Executor Fixer!
-echo Version 1.00
+echo Version 1.01
 echo Made by dsc.gg/clipflip
 echo.
 echo.
@@ -15,11 +15,13 @@ echo [1] Install dependencies (fix most errors)
 echo [2] Fix Solara
 echo [3] Fix Datamodel Errors
 echo [4] Attempt to Fix Celery
-echo [5] Exit
+echo [5] Fix Solara Tabs
+echo [6] Exit
 echo.
 
-choice /c 12345 /m "Enter your choice:"
-if errorlevel 5 goto Exit
+choice /c 123456 /m "Enter your choice:"
+if errorlevel 6 goto Exit
+if errorlevel 5 goto FixSolaraTab
 if errorlevel 4 goto FixCelery
 if errorlevel 3 goto FixDatamodel
 if errorlevel 2 goto FixSolara
@@ -297,6 +299,16 @@ cls
 rd /s /q C:\ProgramData\Solara
 cls
 echo Fixed Solara successfully!
+pause
+goto Start
+
+:FixSolaraTab
+cls
+rd /s /q C:\SolaraTab
+mkdir C:\SolaraTab
+copy NUL C:\SolaraTab\main.lua
+cls
+echo Fixed Solara Tabs successfully!
 pause
 goto Start
 
